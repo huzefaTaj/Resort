@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+{% csrf_token %}
+<head>
+	<title>Resort</title>
+	<link rel="stylesheet" type="text/css" href="static/css/home.css">
+</head>
+<header>
+	<div class="logo" ><img src="static/css/img/logo.jpg " ></div>
+	<ul>
+	<li ><a href="/"><b>Home</b></a></li>
+	<li><a href="/user"><strong>About</strong></a></li>
+		{% if user.is_authenticated %}
+		<li><a href="/logout">Logout</a></li>
+		{% else %}
+	<li><a href="/login"><strong>Login</strong></a></li>
+	<li><a href="/register"><strong>Register</strong></a></li>
+		{% endif %}
+
+	
+	
+</ul>
+</header>
+<body>
+{% if user.is_authenticated %}
+
+     <div class="heading">hello {{ user.first_name}}</div>
+{% endif %}
+
+
+    <div class="heading"> These top restorent are just click away</div>
+	 {% for dest in dests %}
+	<div class="container">
+		<div class="gallary">
+			<img src="{{dest.img}}">
+			<div class="desc"><a href="#"> {{dest.name}}</a></div>
+			<div class="heading"> {{dest.desc}} </div>
+			<div class="desc"><a href="#"> $ {{dest.price}}</a></div>
+		</div>
+	</div>
+{% endfor %}
+</body>
+</html>

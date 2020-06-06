@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resort</title>
+</head>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<header>
+	<img src="static/css/img/logo.jpg "align="center">
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/user">About</a></li>
+	<li><a href="/login">Login</a></li>
+</ul>
+</header>
+<body >
+
+
+<form class="box" action="register" method="post" >
+	{% csrf_token %}
+	
+	<label align="left">Create Account</label>
+	<input type="text" name="first_name" placeholder="first Name">
+	<input type="text" name="last_name" placeholder="Last Name">
+	<input type="email" name="Email" placeholder="Email">
+	<input type="text" name="username" placeholder="Username" align="center">
+	<input type="password" name="password1" placeholder="password">
+	<input type="password" name="password2" placeholder="Confirm password">
+	<input type="submit" name="" value="Signup">
+</form>
+{% for message in messages %}
+				<font size="6" color="red">
+                 {{message}}
+				</font>
+				 {% endfor %}
+				
+</body>
+</html>

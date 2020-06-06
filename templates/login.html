@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+
+</head>
+<link rel="stylesheet" type="text/css" href="static/css/login.css">
+<header>
+	<img src="static/css/img/logo.jpg "align="center">
+	<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/user">About</a></li>
+	<li><a href="/register">Signin</a></li>
+
+	
+</ul>
+
+
+</header>
+<body>
+
+	<form class="box" action="login" method="post" >
+		{% csrf_token %}
+	<label align="left">Login</label>
+	<input type="text" name="username" placeholder="Username" align="center">
+	<input type="password" name="password" placeholder="password">
+	<input type="submit" name="" value="Signup">
+</form>
+{% for message in messages %}
+				<font size="6" color="red">
+                 {{message}}
+				</font>
+				 {% endfor %}
+
+</body>
+</html>

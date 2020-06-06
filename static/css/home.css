@@ -1,0 +1,107 @@
+*{
+	margin: ;
+	padding:0.5;
+}
+
+body{
+	margin: 0px;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("img/resort.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.logo img{
+	max-width: 120px;
+	position: relative;
+	top: 0px;
+	left: 600px;
+}
+
+ul{
+	list-style-type: none;
+	margin: 1;
+	position: relative;
+	top: 0px;
+	width: 2;
+	overflow: hidden;
+	background-color:;
+}
+ul li{
+	display: inline-block ;
+
+	
+}
+
+li a
+{
+	float: left;
+}
+
+li a{
+	margin: 0px;
+	position:center;
+	display: block;
+	padding: 14px 15px;
+	font-family: serif;
+	text-decoration: none;
+	text-align: center;
+	border:3px solid  #FFEFD5;
+	font-size:20px;
+	color: #FFEFD5;
+}
+
+li a:hover{
+	background-color: #2ecc71;
+	color:  #FFEFD5;
+	box-shadow: 0 0 8px #00CED1, 0 0 9px #00CED1, 0 0 10px #00CED1;
+}
+
+
+.container
+{
+	position: relative;
+	top:20px;
+	display: block;
+	overflow: auto;
+	margin: auto;
+	max-width: : 130px;
+	border: 1px solid  #FFEFD5;
+	transition: 0.30s;
+}
+
+.gallary{
+	margin: 5px;
+
+	width: 390px;
+	float: left;
+}
+
+.gallary img{
+	width: 100%;
+	height: 60vh;
+	}
+
+.heading{
+	text-align: center;
+	padding: 15px;
+	color: #FFEFD5;
+	font-size: 30px;
+	border-color: #2ecc71;
+}
+.desc{
+	text-align: center;
+	padding: 15px;
+	color: #FFEFD5;
+	font-size: 25px;
+	border-color: #2ecc71;
+}
+
+.desc a{
+	color: #FFEFD5;
+	padding: 6px 7px;
+	border: 1px solid #FFEFD5;
+	text-align: center;
+
+}
